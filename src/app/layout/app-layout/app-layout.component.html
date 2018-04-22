@@ -1,0 +1,39 @@
+<div fxLayout="column"  >
+  <app-toolbar (navToggleL)="toggleNavL()"></app-toolbar>
+
+  <mat-sidenav-container (backdropClick)="toggleNavL()">
+    <mat-sidenav
+                  [mode]="mode"
+                  [opened]="navBarOpenL" >
+      <mat-nav-list>
+        <mat-list-item *ngFor="let route of routes">
+          <a matLine [routerLink]="route.route">
+          <app-margin-icon [iconName]="route.icon">
+          </app-margin-icon>{{route.title}}
+          </a>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav [mode]="mode"
+                 [opened]="navBarOpenR"
+                 position="end">
+      <div>
+        <mat-card>
+          End content
+        </mat-card>
+      </div>
+    </mat-sidenav>
+
+  <div fxLayout="column">
+    <div fxFlex="85vh">
+        <router-outlet></router-outlet>
+    </div>
+    <footer>
+        <hr fxFlex="1 1 auto">
+
+      <p fxLayoutAlign="center center"> My page</p>
+    </footer>
+  </div>
+  </mat-sidenav-container>
+</div>
+
