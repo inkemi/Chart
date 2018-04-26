@@ -11,7 +11,7 @@ import {Subscription} from 'rxjs/Subscription';
 export class AppLayoutComponent implements OnDestroy {
   routes = [
     {route: '/', title: 'Home', icon: 'home'},
-    {route: '/folders', title: 'Folders', icon: 'folder'},
+    {route: '/chart', title: 'Charts', icon: 'timeline'},
     {route: '/users', title: 'Users', icon: 'face'}
   ];
   navBarOpenL = true;

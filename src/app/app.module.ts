@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 import {LayoutModule} from './layout/layout.module';
 import {MaterialComponentsModule} from './config/material/material.module';
+import {ChartModule} from './chart/chart.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {MaterialComponentsModule} from './config/material/material.module';
     AppRoutingModule,
     LayoutModule,
     MaterialComponentsModule,
+    ChartModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
